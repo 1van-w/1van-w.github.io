@@ -1,8 +1,8 @@
 # Setup
-title: Not Pure Poole
+title: 1van
 description: A simple, beautiful, and powerful Jekyll theme for blogs
 url: https://1van-w.github.io
-avatar: /avatar.jpeg
+avatar: /head.jpg
 paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
@@ -33,10 +33,9 @@ twitter:
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: 1van
   links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
+    - https://github.com/1van-w
 google_site_verification: xxxxx
 lang: en
 
@@ -54,6 +53,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: 1van
+  url: https://github.com/1van-w
+  email: 1van122219@gmail.com
