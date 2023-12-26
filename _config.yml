@@ -1,6 +1,6 @@
 # Setup
 title: 1van
-description: A simple, beautiful, and powerful Jekyll theme for blogs
+description: A handsome man
 url: https://1van-w.github.io
 avatar: /head.jpg
 paginate: 5
@@ -29,7 +29,7 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
+  username: 1van
   card: summary
 logo: logo.png
 social:
