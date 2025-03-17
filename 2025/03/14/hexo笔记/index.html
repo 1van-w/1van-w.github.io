@@ -30,20 +30,20 @@
     </div>
     <div class="post-content">
         <h1 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h1><ul>
-<li>创建新的页面：hexo new page “路径”，e.g hexo new page “&#x2F;about”</li>
-<li>创建新的笔记：hexo new “笔记名字”，e.g hexo new “hexo笔记”</li>
+<li>创建新的页面：hexo new page “路径”，e.g: hexo new page “&#x2F;about”</li>
+<li>创建新的笔记：hexo new “文件名”</li>
 </ul>
-<h1 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h1><ul>
-<li><p><strong>hexo init</strong></p>
+<h1 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h1><ul>
+<li><p>hexo init</p>
 <p>  <code>hexo init</code> 命令用于初始化本地文件夹为网站的根目录</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init [folder]</span><br><span class="line"></span><br><span class="line">folder 可选参数，用以指定初始化目录的路径，若无指定则默认为当前目录</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>hexo new</strong></p>
+<li><p>hexo new</p>
 <p>  <code>hexo new</code> 命令用于新建文章，一般可以简写为 <code>hexo n</code></p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br><span class="line">layout 可选参数，用以指定文章类型，若无指定则默认由配置文件中的 default_layout 选项决定</span><br><span class="line">title 必填参数，用以指定文章标题，如果参数值中含有空格，则需要使用双引号包围</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>hexo server</strong></p>
-<p>  <code>hexo server</code> 命令用于启动本地服务器，一般可以简写为 <code>hexo s</code></p>
+<li><p>hexo server</p>
+<p>  <code>hexo server</code>命令用于启动本地服务器，一般可以简写为 <code>hexo s</code></p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line">-p 选项，指定服务器端口，默认为 4000</span><br><span class="line">- i 选项，指定服务器 IP 地址，默认为 0.0.0.0</span><br><span class="line">- s 选项，静态模式 ，仅提供 public 文件夹中的文件并禁用文件监视</span><br></pre></td></tr></table></figure>
 <p>  <strong>说明</strong> ：运行服务器前需要安装 hexo-server 插件</p>
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-server --save</span><br></pre></td></tr></table></figure>
@@ -51,12 +51,12 @@
 <li>详细信息请参考：<a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">https://hexo.io/docs/server.html</a></li>
 </ul>
 </li>
-<li><p><strong>hexo generate</strong></p>
+<li><p>hexo generate</p>
 <p>  <code>hexo generate</code> 命令用于生成静态文件，一般可以简写为 <code>hexo g</code></p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">-d 选项，指定生成后部署，与 hexo d -g 等价</span><br></pre></td></tr></table></figure>
 <p>  详细信息请参考：<a target="_blank" rel="noopener" href="https://hexo.io/docs/generating">https://hexo.io/docs/generating</a></p>
 </li>
-<li><p><strong>hexo deploy</strong></p>
+<li><p>hexo deploy</p>
 <p>  <code>hexo deploy</code> 命令用于部署网站，一般可以简写为 <code>hexo d</code></p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line">-g 选项，指定生成后部署，与 hexo g -d 等价</span><br></pre></td></tr></table></figure>
 <p>  说明 ：部署前需要修改 _config.yml 配置文件，下面以 git 为例进行说明</p>
@@ -68,23 +68,45 @@
   <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
 <p>  <strong>网站显示异常时可尝试此操作</strong></p>
 </li>
-<li><p><strong>Option</strong></p>
-<p>  （1）hexo –safe</p>
+<li><p>Option</p>
+<ol>
+<li>hexo –safe</li>
+</ol>
 <p>  <code>hexo --safe</code> 表示安全模式，用于禁用加载插件和脚本</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --safe</span><br></pre></td></tr></table></figure>
-
 <p>  安装新插件时遇到问题可尝试此操作</p>
-<p>  （2）hexo –debug</p>
+<ol start="2">
+<li>hexo –debug</li>
+</ol>
 <p>  hexo –debug 表示调试模式，用于将消息详细记录到终端和 debug.log 文件</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --debug</span><br></pre></td></tr></table></figure>
-
-<p>  （3）hexo –silent</p>
+<ol start="3">
+<li>hexo –silent</li>
+</ol>
 <p>  hexo –silent 表示静默模式，用于静默输出到终端</p>
   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --silent</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>【参考资料】</p>
-<ul>
+<h1 id="异地同步"><a href="#异地同步" class="headerlink" title="异地同步"></a>异地同步</h1><h2 id="原电脑操作："><a href="#原电脑操作：" class="headerlink" title="原电脑操作："></a>原电脑操作：</h2><ul>
+<li>在原电脑上操作，给 username.github.io 博客仓库创建hexo分支，并设为默认分支。（可从github docs查看 <a target="_blank" rel="noopener" href="https://docs.github.com/zh/repositories/configuring-branches-and-merges-in-your-repository">创建和修改分支</a>）</li>
+<li>随便一个目录下，命令行执行 <code>git clone git@github.com:username/username.github.io.git</code> 把仓库(hexo分支) clone 到本地。 显示所有隐藏文件和文件夹，进入刚才 clone 到本地的仓库，删掉除了 .git 文件夹以外的所有内容。</li>
+<li>命令行 cd 到 clone 的仓库，<code>git add -A</code> ，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，把刚才删除操作引起的本地仓库变化更新到远程，此时刷新下 github 端博客hexo分支，应该已经被清空了。</li>
+<li>将上述 .git 文件夹复制到本机本地博客hexo根目录下（含有 themes、source 等文件夹），这样本机博客目录已经变成可以和 hexo 分支相连的仓库了。</li>
+<li>将博客目录下 themes 文件夹下每个主题文件夹里面的 .git .gitignore 删掉。（无需删除博客根目录下的.gitignore）</li>
+<li>cd 到博客根目录，<code>git add -A</code> ，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，将博客目录下所有文件更新到 hexo 分支。(如果上一步没有删掉 .git .gitignore，主题文件夹下内容将传不上去)。</li>
+</ul>
+<p><strong>一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。</strong></p>
+<h2 id="新电脑操作："><a href="#新电脑操作：" class="headerlink" title="新电脑操作："></a>新电脑操作：</h2><ul>
+<li>先把新电脑上环境安装好，node.js、git、hexo，ssh key 也创建和添加好。可以使用<code>node -v</code>，<code>git -v</code> ，<code>hexo -v</code> 查看相关配置是否安装成功。</li>
+<li>选好博客安装的目录， <code>git clone git@github.com:username/username.github.io.git</code>。</li>
+<li>cd 到博客目录，(1)<code>npm install</code>、<code>hexo g</code>、<code>hexo s</code>，安装依赖，生成和启动博客服务。正常的话，浏览器打开 localhost:4000 可以看到博客了。(2)<code>npm install</code> 、<code>hexo clean</code> 、<code>hexo d -g</code>，完成依赖安装，重新生成、部署上线到GitHub Pages。</li>
+</ul>
+<p><strong>原始文件的提交</strong></p>
+<p>&emsp;&emsp;以后无论在哪台电脑上，更新以及提交博客，依次执行，<code>git pull</code>，<code>git add -A</code> ，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code> 即可。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/wsmrzx/article/details/81478103">https://blog.csdn.net/wsmrzx/article/details/81478103</a></li>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/docs/commands">https://hexo.io/docs/commands</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/juzaizai/p/14472119.html">https://www.cnblogs.com/juzaizai/p/14472119.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44008788/article/details/108325786">https://blog.csdn.net/weixin_44008788/article/details/108325786</a></li>
 </ul>
 
     </div>
