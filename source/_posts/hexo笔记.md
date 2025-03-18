@@ -1,7 +1,8 @@
 ---
 title: hexo笔记
 date: 2025-03-14 23:20:55
-tags: "hexo"
+tags: 
+    - hexo
 ---
 
 # 功能

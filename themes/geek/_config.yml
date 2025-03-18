@@ -4,8 +4,14 @@ style: white
 
 favicon: /favicon.ico
 
+tag_generator:
+  per_page: 10
+  order_by: -date
+
+
 menu:
   作品: /project
+  标签: /tags
   域名: /domain
   友联: /links
   关于: /about

@@ -1,0 +1,16 @@
+<div class="hd posts">
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            <%= page.title %>
+        </p>
+        <hr>
+    </div>
+    <p>
+        <% site.tags.forEach(function(tag){ %>
+        <li>
+            <a class="flink" href="<%= url_for(tag.path) %>">#<%= tag.name %> (<%= tag.length %>)</a>
+        </li>
+        <% }); %>
+    </p>
+</div>

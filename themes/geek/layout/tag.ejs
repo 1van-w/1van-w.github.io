@@ -1,0 +1,20 @@
+<div class="hd posts">
+    <a href="/tags"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            #<%= page.tag %>
+        </p>
+        <hr>
+    </div>
+    <% if (!page.posts.length) { %>
+        <p>暂无相关文章</p>
+    <% } else { %>
+        <ul>
+        <% page.posts.each(function(post) { %>
+            <li>
+            <a class="flink" href="<%= url_for(post.path) %>"><%= post.title %></a> - <%= post.date.format('YYYY-MM-DD') %>
+            </li>
+        <% }) %>
+        </ul>
+    <% } %>
+</div>
