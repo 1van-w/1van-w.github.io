@@ -62,6 +62,53 @@
 
 
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeStyleInput = document.getElementById('web_style');
+        const logo = document.getElementById('logo');
+        const themeSwitch = document.getElementById('update_style');
+
+        // 设置初始状态
+        function initializeTheme() {
+            // 从 localStorage 中读取主题
+            const storedTheme = localStorage.getItem('theme') || 'white';
+            const isBlackTheme = storedTheme === 'black';
+            themeStyleInput.value = storedTheme;
+            themeSwitch.checked = isBlackTheme;  // black 主题时按钮激活
+            updateTheme(isBlackTheme);
+        }
+
+        // 更新 logo 和主题
+        function updateTheme(isBlackTheme) {
+            if (isBlackTheme) {
+                logo.src = 'img/u.png';
+                document.body.classList.add('black-theme');
+                document.body.classList.remove('white-theme');
+            } else {
+                logo.src = 'img/i.png';
+                document.body.classList.add('white-theme');
+                document.body.classList.remove('black-theme');
+            }
+        }
+
+        // 初始化页面主题
+        initializeTheme();
+
+        // 监听主题切换
+        themeSwitch.addEventListener('change', function() {
+            const isBlackTheme = themeSwitch.checked;
+            themeStyleInput.value = isBlackTheme ? 'black' : 'white';
+            updateTheme(isBlackTheme);
+            // 将当前主题存储到 localStorage 中
+            localStorage.setItem('theme', themeStyleInput.value);
+        });
+    });
+</script> 
+
+
+
+
+
 <style type="text/css">
 .v * {
     color: #698fca;
