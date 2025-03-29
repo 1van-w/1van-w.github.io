@@ -21,28 +21,36 @@
 
 <body id="bodyx">
     <div class="hd posts">
-    <a href="/tags"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
+    <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
-            #hexo
+            在hexo博客中插入图片的方法
         </p>
         <hr>
     </div>
-    
-        <ul>
+    <p>
         
-            <li>
-            <a class="flink" href="/2025/03/29/%E5%9C%A8hexo%E5%8D%9A%E5%AE%A2%E4%B8%AD%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87%E7%9A%84%E6%96%B9%E6%B3%95/">在hexo博客中插入图片的方法</a> - 2025-03-29
-            </li>
+          <a class="flink" href="/tags/hexo/">#hexo </a>
         
-            <li>
-            <a class="flink" href="/2025/03/14/hexo%E7%AC%94%E8%AE%B0/">hexo笔记</a> - 2025-03-14
-            </li>
-        
-        </ul>
-    
-</div>
+    </p>
+    <hr>
+    <div class="post-content">
+        <h1 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h1><p>&emsp;&emsp;博客搭建完成之后，在我发布文章时，发现文章的图片不同于普通markdown文件中的图片可以简单地使用相对路径来展现，在查阅官方文档和其他博主的文章后，整理了几种插入图片的方法步骤。</p>
+<h1 id="如果图片文件在本地"><a href="#如果图片文件在本地" class="headerlink" title="如果图片文件在本地"></a>如果图片文件在本地</h1><h2 id="方法一：全局资源文件夹"><a href="#方法一：全局资源文件夹" class="headerlink" title="方法一：全局资源文件夹"></a>方法一：全局资源文件夹</h2><p>&emsp;&emsp;将所有的图片文件都存在hexo文件夹下的source目录下的某个文件夹内，我们且称为images（由你自己创建和命名），将所有的资源通过这一个文件夹来进行统一管理。好处是便于使用，多篇文章可以使用同一个图片文件。不便的是，在你文章资源量逐渐变大后，文件夹内的资源便无法简便地管理，于是我们有了方法二：文章资源文件夹，在下一节介绍。</p>
+<h3 id="使用全局资源文件夹的具体步骤："><a href="#使用全局资源文件夹的具体步骤：" class="headerlink" title="使用全局资源文件夹的具体步骤："></a>使用全局资源文件夹的具体步骤：</h3><p>&emsp;&emsp;首先在hexo文件夹下的source目录下创建images（自己随意命名）文件夹，在存入文章资源后，在md文件中可以使用<code>![图片](图片链接地址 &quot;图片title&quot;)</code>，注意：在写相对路径时，根目录为source文件夹，并不是hexo项目文件夹，所以假如images文件夹下有一个name.jpg图片文件，那么圆括号内的文件地址就是(&#x2F;images&#x2F;name.jpg)。下面是例子：<code>![我的狗](/images/my_dog.jpeg)</code></p>
+<p><img src="/images/my_dog.jpeg" alt="我的狗"></p>
+<h2 id="方法二：文章资源文件夹"><a href="#方法二：文章资源文件夹" class="headerlink" title="方法二：文章资源文件夹"></a>方法二：文章资源文件夹</h2><h1 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/asset-folders">hexo官方文档</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/2301_77285173/article/details/130189857">kathy-tx的csdn博客</a></li>
+</ol>
 
+    </div>
+
+    <!-- 
+        <hr class="fhr">
+        <div id="vcomments"></div>
+     -->
+</div>
     <div class="footer" id="footer">
     <p>Copyright © 2024-2025 <a class="flink" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a>-<a class="flink" target="_blank" rel="noopener" href="https://github.com/sanjinhub/hexo-theme-geek">Geek</a>.
         <label class="el-switch el-switch-green el-switch-sm" style="vertical-align: sub;">
